@@ -4,9 +4,7 @@ A modern, responsive landing page for a fictional AI startup called **NovaAI**.
 
 The project was built to practice and demonstrate core frontend development skills, including responsive layouts, semantic HTML, CSS styling, and JavaScript interactivity.
 
-[🚀 Live Demo]((https://novaai-landing-page.netlify.app))
-
-
+[🚀 Live Demo](https://novaai-landing-page.netlify.app)
 
 ---
 
