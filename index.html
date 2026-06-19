@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nova AI — Turn raw work into structured output, instantly</title>
+    <meta
+      name="description"
+      content="Nova AI is the copilot that takes your messy notes, research, and drafts and ignites them into clean, structured work — in seconds."
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ================= NAV ================= -->
+    <header class="nav" id="top">
+      <div class="nav__inner">
+        <a class="nav__brand" href="#top">
+          <img src="assets/icons/logo-mark.svg" alt="" class="nav__mark" />
+          <span>Nova<span class="nav__brand-ai">AI</span></span>
+        </a>
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#product">Product</a>
+          <a href="#how">How it works</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div class="nav__actions">
+          <a href="#" class="link-ghost">Sign in</a>
+          <a href="#pricing" class="btn btn--small">Start free</a>
+        </div>
+        <button
+          class="nav__burger"
+          id="burgerBtn"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="nav__mobile" id="mobileMenu" aria-label="Mobile">
+        <a href="#product">Product</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#" class="link-ghost">Sign in</a>
+        <a href="#pricing" class="btn btn--small">Start free</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ================= HERO ================= -->
+      <section class="hero">
+        <div class="hero__inner">
+          <div class="hero__copy">
+            <p class="eyebrow">AI WORKSPACE COPILOT</p>
+            <h1 class="hero__title">
+              Your work, <br />
+              <span class="ignite-text" id="igniteText">unfinished</span><br />
+              becomes work, <em>done.</em>
+            </h1>
+            <p class="hero__sub">
+              Nova takes the scattered parts of your day — call notes,
+              half‑written drafts, raw research, loose data — and ignites them
+              into clean, structured output before your coffee's cold.
+            </p>
+            <div class="hero__cta">
+              <button class="btn btn--accent" id="igniteBtn">
+                Ignite a document
+              </button>
+              <a href="#how" class="btn btn--outline">See how it works</a>
+            </div>
+            <p class="hero__meta">
+              No credit card · Cancel in one click · SOC 2 Type II
+            </p>
+          </div>
+
+          <div class="hero__demo" aria-hidden="false">
+            <img
+              class="hero__burst"
+              src="assets/images/hero-burst.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <div class="demo-card">
+              <div class="demo-card__head">
+                <span class="dot dot--a"></span><span class="dot dot--b"></span
+                ><span class="dot dot--c"></span>
+                <span class="demo-card__title">nova — transform.md</span>
+              </div>
+              <div class="demo-card__body">
+                <pre class="demo-input" id="demoInput">
+raw input —
+"talked to the maybe customer. likes
+pricing but worried bout onboarding time,
+wants a demo next wk, also competitor X
+quoted them lower, follow up thurs"</pre
+                >
+                <div class="demo-arrow" id="demoArrow">
+                  <svg viewBox="0 0 24 60" width="24" height="60">
+                    <line
+                      x1="12"
+                      y1="2"
+                      x2="12"
+                      y2="50"
+                      stroke="#F2A93B"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M4 42l8 10 8-10"
+                      stroke="#F2A93B"
+                      stroke-width="2"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="demo-output" id="demoOutput">
+                  <p class="demo-output__label">CALL SUMMARY — STRUCTURED</p>
+                  <ul>
+                    <li>
+                      <strong>Sentiment:</strong> Positive, price-qualified
+                    </li>
+                    <li><strong>Objection:</strong> Onboarding timeline</li>
+                    <li><strong>Risk:</strong> Competitor X — lower quote</li>
+                    <li>
+                      <strong>Next step:</strong> Demo scheduled, follow-up Thu
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= LOGO STRIP ================= -->
+      <section class="logos" aria-label="Trusted by">
+        <p class="logos__label">Trusted by teams who move fast</p>
+        <div class="logos__row">
+          <span class="logo-wordmark">ARCFORM</span>
+          <span class="logo-wordmark">LINDEN&nbsp;&amp;&nbsp;CO</span>
+          <span class="logo-wordmark">MERIDIAN</span>
+          <span class="logo-wordmark">QUILL&nbsp;LABS</span>
+          <span class="logo-wordmark">OXBOW</span>
+          <span class="logo-wordmark">PALETTE</span>
+        </div>
+      </section>
+
+      <!-- ================= FEATURES ================= -->
+      <section class="features" id="product">
+        <div class="section-head">
+          <p class="eyebrow">PRODUCT</p>
+          <h2>Four ways Nova earns its place in your stack</h2>
+        </div>
+        <div class="features__grid">
+          <article class="feature-card">
+            <img
+              src="assets/icons/icon-instant.svg"
+              alt=""
+              class="feature-card__icon"
+            />
+            <h3>Instant by default</h3>
+            <p>
+              Paste a transcript, a brief, a spreadsheet of mess. Nova returns
+              structured output in under four seconds — no queue, no
+              "generating."
+            </p>
+          </article>
+          <article class="feature-card">
+            <img
+              src="assets/icons/icon-structure.svg"
+              alt=""
+              class="feature-card__icon"
+            />
+            <h3>Templates that learn you</h3>
+            <p>
+              Nova studies the shape of your team's best work — your brief
+              format, your report structure — and reuses it without being asked
+              twice.
+            </p>
+          </article>
+          <article class="feature-card">
+            <img
+              src="assets/icons/icon-secure.svg"
+              alt=""
+              class="feature-card__icon"
+            />
+            <h3>Your data stays yours</h3>
+            <p>
+              Nothing you send Nova trains a shared model. Workspace isolation,
+              encryption at rest, and a data retention dial you control.
+            </p>
+          </article>
+          <article class="feature-card">
+            <img
+              src="assets/icons/icon-insight.svg"
+              alt=""
+              class="feature-card__icon"
+            />
+            <h3>Sees the pattern, not just the page</h3>
+            <p>
+              Ask Nova what changed across ten calls or thirty documents and get
+              the trend, the outlier, and the thing you missed.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================= HOW IT WORKS ================= -->
+      <section class="how" id="how">
+        <div class="section-head">
+          <p class="eyebrow">HOW IT WORKS</p>
+          <h2>From mess to memo in three steps</h2>
+        </div>
+        <ol class="how__steps">
+          <li class="how__step">
+            <span class="how__num">01</span>
+            <h3>Drop it in</h3>
+            <p>
+              A call recording, a Slack thread, a pile of sticky notes typed up
+              at 11pm. Nova doesn't need clean input.
+            </p>
+          </li>
+          <li class="how__step">
+            <span class="how__num">02</span>
+            <h3>Choose the shape</h3>
+            <p>
+              Pick an output format — brief, report, ticket, summary — or let
+              Nova infer it from what you fed it.
+            </p>
+          </li>
+          <li class="how__step">
+            <span class="how__num">03</span>
+            <h3>Ship it</h3>
+            <p>
+              Edit inline, export to Docs/Notion/Slack, or hand it straight to
+              the next person in the chain.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ================= TESTIMONIAL ================= -->
+      <section class="testimonial">
+        <blockquote>
+          <p>
+            “We stopped measuring Nova in hours saved and started measuring it
+            in meetings we didn't need to have — because the notes already said
+            everything.”
+          </p>
+          <footer>
+            <span class="testimonial__name">Priya Shenoy</span>
+            <span class="testimonial__role">Head of Ops, Meridian</span>
+          </footer>
+        </blockquote>
+      </section>
+
+      <!-- ================= PRICING ================= -->
+      <section class="pricing" id="pricing">
+        <div class="section-head">
+          <p class="eyebrow">PRICING</p>
+          <h2>Start free. Scale when it's earned its seat.</h2>
+        </div>
+        <div class="pricing__grid">
+          <article class="price-card">
+            <h3>Starter</h3>
+            <p class="price-card__price">$0<span>/mo</span></p>
+            <p class="price-card__desc">
+              For trying Nova on real work, not a sandbox.
+            </p>
+            <ul>
+              <li>50 transforms / month</li>
+              <li>3 output templates</li>
+              <li>Email support</li>
+            </ul>
+            <a href="#" class="btn btn--outline btn--full">Start free</a>
+          </article>
+          <article class="price-card price-card--featured">
+            <p class="price-card__tag">Most teams choose this</p>
+            <h3>Team</h3>
+            <p class="price-card__price">$32<span>/seat/mo</span></p>
+            <p class="price-card__desc">
+              For teams who ship structured work daily.
+            </p>
+            <ul>
+              <li>Unlimited transforms</li>
+              <li>Custom templates &amp; voice</li>
+              <li>Shared workspace memory</li>
+              <li>Priority support</li>
+            </ul>
+            <a href="#" class="btn btn--accent btn--full">Start free trial</a>
+          </article>
+          <article class="price-card">
+            <h3>Enterprise</h3>
+            <p class="price-card__price">Custom</p>
+            <p class="price-card__desc">
+              For orgs with security review and SSO needs.
+            </p>
+            <ul>
+              <li>SSO &amp; SCIM</li>
+              <li>Dedicated data retention controls</li>
+              <li>Audit logs</li>
+              <li>Dedicated success manager</li>
+            </ul>
+            <a href="#" class="btn btn--outline btn--full">Talk to sales</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================= FAQ ================= -->
+      <section class="faq" id="faq">
+        <div class="section-head">
+          <p class="eyebrow">FAQ</p>
+          <h2>Things people ask before they ignite</h2>
+        </div>
+        <div class="faq__list">
+          <details class="faq__item" open>
+            <summary>Does Nova train on our data?</summary>
+            <p>
+              No. Workspace content is never used to train shared models. You
+              can also set an automatic deletion window per workspace.
+            </p>
+          </details>
+          <details class="faq__item">
+            <summary>Can Nova match our existing document formats?</summary>
+            <p>
+              Yes — upload a few examples and Nova mirrors structure, tone, and
+              section order going forward.
+            </p>
+          </details>
+          <details class="faq__item">
+            <summary>What happens when I hit my plan's limit?</summary>
+            <p>
+              You'll get a warning at 80% usage. Nothing is cut off mid-task —
+              you can finish what you started, then upgrade or wait for the next
+              cycle.
+            </p>
+          </details>
+          <details class="faq__item">
+            <summary>Is there an API?</summary>
+            <p>
+              Yes, available on Team and Enterprise plans, with the same
+              transform engine that powers the app.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <!-- ================= FINAL CTA ================= -->
+      <section class="final-cta">
+        <h2>Stop formatting. Start shipping.</h2>
+        <p>
+          Bring your first messy document. Nova will have it ready before you've
+          read this twice.
+        </p>
+        <button class="btn btn--accent btn--large" id="finalCtaBtn">
+          Ignite a document
+        </button>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="footer__top">
+        <a class="nav__brand" href="#top">
+          <img src="assets/icons/logo-mark.svg" alt="" class="nav__mark" />
+          <span>Nova<span class="nav__brand-ai">AI</span></span>
+        </a>
+        <div class="footer__cols">
+          <div class="footer__col">
+            <h4>Product</h4>
+            <a href="#product">Features</a>
+            <a href="#how">How it works</a>
+            <a href="#pricing">Pricing</a>
+          </div>
+          <div class="footer__col">
+            <h4>Company</h4>
+            <a href="#">About</a>
+            <a href="#">Careers</a>
+            <a href="#">Blog</a>
+          </div>
+          <div class="footer__col">
+            <h4>Resources</h4>
+            <a href="#faq">FAQ</a>
+            <a href="#">Docs</a>
+            <a href="#">Status</a>
+          </div>
+          <div class="footer__col">
+            <h4>Legal</h4>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Security</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Nova AI, Inc. All rights reserved.</p>
+        <p>Made for people who'd rather be done.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
